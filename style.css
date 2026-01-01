@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #050505;
+  font-family: Arial;
+}
+
+.scene {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  perspective: 1200px;
+}
+
+.cube {
+  width: 180px;
+  height: 80px;
+  position:fixed;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1s;
+}
+
+
+.face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+background-color: rgb(9, 76, 177);
+  border: 2px solid rgba(0,255,255,.6);
+  box-shadow: 0 0 20px rgba(0,255,255,.6);
+}
+
+
+.front  { transform: translateZ(40px); }
+.back   { transform: rotateY(180deg) translateZ(40px); }
+.right  { transform: rotateY(90deg) translateZ(40px); }
+.left   { transform: rotateY(-90deg) translateZ(40px); }
+.top    { transform: rotateX(90deg) translateZ(40px); }
+.bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+
+/* Центральный куб */
+.cube1 {
+  
+  top: 210px;
+  left: 210px;
+  transform: translateZ(0px);
+}
+
+/* Вверх */
+.cube2 {
+  width: 180px;
+  height: 80px;
+  position:relative;
+  transform-style: preserve-3d;
+  top: 130px;
+  left: 210px;
+  transform: translateZ(0px);
+}
+
+/* Вниз */
+.cube3 {
+  top: 290px;
+  left: 210px;
+  transform: translateZ(0px);
+}
+
+/* Влево */
+.cube4 {
+  top: 210px;
+  left: 130px;
+  transform: translateZ(0px);
+}
+
+/* Вправо */
+.cube5 {
+  top: 210px;
+  left: 290px;
+  transform: translateZ(0px);
+}
+
+/* Вперёд (по Z) */
+.cube6 {
+  top: 210px;
+  left: 210px;
+  transform: translateZ(80px);
+}
+
+/* Назад (по Z) */
+.cube7 {
+  top:300px;
+  left: 210px;
+  transform: translateZ(-80px);
+}
